@@ -6,7 +6,7 @@ dotenv.config();
   const sdk = ThirdwebSDK.fromPrivateKey(process.env.PRIVATE_KEY, "goerli");
 
   const pack = await sdk.getContract(
-    "0x0Aee160411473f63be2DfF2865E81A1D59636C97"
+    "0x1D7714b0c712D601b6058B566e0450a2275594EE"
   );
 
   const packNfts = await pack.getAll();

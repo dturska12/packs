@@ -53,14 +53,6 @@ const Home: NextPage = () => {
                   >
                     Open
                   </Web3Button>
-                  <Web3Button
-                    contractAddress="0x1D7714b0c712D601b6058B566e0450a2275594EE"
-                    action={(contract) => {
-                      contract.call("addPackContents");
-                    }}
-                  >
-                    addPackContents
-                  </Web3Button>
                 </div>
               ))}
             </div>

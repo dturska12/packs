@@ -45,12 +45,21 @@ import fs from "fs";
     erc20Rewards: [
       {
         contractAddress: tokenAddress,
-        quantityPerReward: 50000,
+        quantityPerReward: 100000,
         quantity: 1,
         totalRewards: 12,
       },
     ],
-    rewardsPerPack: 1,
+
+    erc1155Rewards: [
+      {
+        contractAddress: editionAddress,
+        tokenId: 1,
+        quantityPerReward: 1,
+        totalRewards: 12,
+      },
+    ],
+    rewardsPerPack: 2,
   });
   console.log(`====== Success: Pack NFTs =====`);
 

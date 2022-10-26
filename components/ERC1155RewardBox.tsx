@@ -1,13 +1,16 @@
-import { ThirdwebNftMedia, useContract, useNFT } from "@thirdweb-dev/react";
-import { BigNumber } from "ethers";
+import {
+  ThirdwebNftMedia,
+  useMetadata,
+  useContract,
+} from "@thirdweb-dev/react";
 import React from "react";
 import styles from "../styles/Home.module.css";
 
 type Props = {
   reward: {
-    tokenId: string | number | bigint | BigNumber;
+    tokenId: string | number;
     contractAddress: string;
-    quantityPerReward: string | number | bigint | BigNumber;
+    quantityPerReward: string | number;
   };
 };
 
