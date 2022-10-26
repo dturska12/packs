@@ -1,4 +1,5 @@
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { ContractAppURI } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-appuri";
 import { ThirdwebStorage } from "@thirdweb-dev/storage";
 import dotenv from "dotenv";
 dotenv.config();
@@ -45,8 +46,17 @@ import fs from "fs";
     erc20Rewards: [
       {
         contractAddress: tokenAddress,
-        quantityPerReward: 50000,
+        quantityPerReward: 100000,
         quantity: 1,
+        totalRewards: 12,
+      },
+    ],
+    //Access Pass Blood Red
+    erc1155Rewards: [
+      {
+        contractAddress: editionAddress,
+        tokenId: 1,
+        quantityPerReward: 1,
         totalRewards: 12,
       },
     ],

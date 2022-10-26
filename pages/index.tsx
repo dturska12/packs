@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   const address = useAddress();
 
   const { contract: pack } = useContract(
-    "0x697786E18F370b04e96497113016a2c8c85B17F4",
+    "0x1D7714b0c712D601b6058B566e0450a2275594EE",
     "pack"
   );
 
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                   <h3>{nft.metadata.name}</h3>
 
                   <Web3Button
-                    contractAddress="0x697786E18F370b04e96497113016a2c8c85B17F4"
+                    contractAddress="0x1D7714b0c712D601b6058B566e0450a2275594EE"
                     action={async () => {
                       const openedRewards = await pack?.open(0, 1);
                       console.log("Opened rewards:", openedRewards);
@@ -52,6 +52,14 @@ const Home: NextPage = () => {
                     }}
                   >
                     Open
+                  </Web3Button>
+                  <Web3Button
+                    contractAddress="0x1D7714b0c712D601b6058B566e0450a2275594EE"
+                    action={(contract) => {
+                      contract.call("addPackContents");
+                    }}
+                  >
+                    addPackContents
                   </Web3Button>
                 </div>
               ))}

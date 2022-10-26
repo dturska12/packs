@@ -1,4 +1,5 @@
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { ContractAppURI } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-appuri";
 import { ThirdwebStorage } from "@thirdweb-dev/storage";
 import dotenv from "dotenv";
 dotenv.config();
@@ -45,12 +46,21 @@ import fs from "fs";
     erc20Rewards: [
       {
         contractAddress: tokenAddress,
-        quantityPerReward: 50000,
+        quantityPerReward: 20000,
         quantity: 1,
-        totalRewards: 12,
+        totalRewards: 666,
       },
     ],
-    rewardsPerPack: 1,
+    //Access Pass Blood Red
+    erc1155Rewards: [
+      {
+        contractAddress: editionAddress,
+        tokenId: 2,
+        quantityPerReward: 1,
+        totalRewards: 666,
+      },
+    ],
+    rewardsPerPack: 2,
   });
   console.log(`====== Success: Pack NFTs =====`);
 
